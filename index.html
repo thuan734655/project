@@ -8,7 +8,7 @@
     body{
       display:grid;
       background-image: url(https://i1.sndcdn.com/artworks-rrAMPF6pr7uXGi29-7E0mHg-t500x500.jpg);
-      background-repeat: no-repeat;
+      /* background-repeat: no-repeat; */
       background-size: cover;
     }
    .nav {
@@ -16,6 +16,7 @@
     min-height: 40px;
     display: flex;
     justify-content: space-between;
+    /* transform: translate(-50%,-50%); */
     
    }
    .nav-list{
@@ -26,18 +27,15 @@
    .nav-item{
     color: aliceblue;
    list-style: none;
-   margin: 0 8px;
+   margin: 0 8px; 
    display: inline-block;
+   font-size: 20px;
    
    }
    .active:active{
     color: black;
    }
-   .video{
-    width: 700px;
-    height: 700px;
-    margin: auto;
-   }
+  
    .toobar{
     background-color: aqua;
    }
@@ -52,34 +50,387 @@
    }
    .title {
     color: white;
-    mar
+    margin-left: 50%;
+    margin-top: 100px;
+
    }
+
+
+    /* css sign in */
+   .box{
+            height: 300px;
+            width: 500px;
+            background-color: white;
+            /* background-position:  bottom center; */
+            margin-top: 400px;
+            margin-left: 50%;
+            display: none;
+                transform: translate(-50%,-50%);
+            /* display: flex; */
+            border-radius: 10px;
+         z-index: 1;
+            /* background-repeat: no-repeat;
+            background-size: cover; */
+          
+        }
+        .div__input {
+          width: 50%;
+          height: 50%;
+          background-color: aquamarine;
+          margin: 0 125px;
+          /* margin-top:; */
+          margin-bottom: 100px;
+          /* background-position: bottom center; */
+       
+        }
+        .box-label{
+        color: rgba(4, 2, 32, 0.778);
+         min-width: 100px;
+          
+        }
+        .input{
+          display: flex;
+         flex: 1;    
+        }
+         .box-align{
+            width: 70px;
+            margin-top: 50px;
+            margin-left: 170px;
+         }
+      
+       #next {
+        font-size: 16px;
+        display: none;
+       }
+         .notification{
+            color:red;
+            font-size: 13px;
+            min-width: 100px;
+            display: inline-flex;
+            display: none;
+         }
+         .next{
+          min-width: 100px;
+         text-decoration: none;
+         color: black;
+         font-size: 16px;
+             }
+   
+         
+         .next:hover{
+          color: #dc4a38;
+         }
+         .align {
+          display: inline-flex;
+          
+
+         }
+
+
+         /* css sign up */
+
+         .boxSU{
+          height: 300px;
+            width: 450px;
+            background-color: beige;
+            /* background-position:  bottom center; */
+            margin-top: 400px;
+            margin-left: 50%;
+            display: none;
+                transform: translate(-50%,-50%);
+            /* display: flex; */
+            border-radius: 10px;
+            z-index: 0;
+       
+        }
+        .display{
+           margin:auto;
+        }
+        .describe{
+            margin: 0;
+        }
+        .notificationSU {
+            display: none;
+            color: red;
+            font-size: 13px;
+        }
+        .displayResult {
+            color: rgb(41, 213, 78);
+            display: none ;
+        }
+        .nextSU{
+            display: inline-flex;
+        
+        }
+        .alignment{
+          margin-top: 15px;
+          margin-left: 150px;
+        }
+         .box, .boxSU {
+          position: absolute;
+         }
   </style>
 </head>
  <body>
-      
-   <div class= "nav">
-    <ul class= "nav-list">
-      <li class = "nav-item">
-        <a class ="link" href="">Java</a>
-      </li>
-      <li class = "nav-item">
-        <a class ="link" href="">PHP</a>
-      </li>
-      <li class = "nav-item">
-        <a class ="link" href="">Javascript</a>
-      </li>
-    </ul>
-    <ul class = "nav-list">
+   <!-- giao dien -->
      
-        <li class = "nav-item active"> 
-          <a class="link" href="./signUp.html">Sign in</a>
-        </li>
-        <li class = "nav-item active"> <a class = "link" href="./signUp.html"> Sign up</a> </li>
-      
-     
-    </ul>
+        <div class= "nav">
+          <ul class= "nav-list">
+            <li class = "nav-item">
+              <a class ="link" href="">Java</a>
+            </li>
+            <li class = "nav-item">
+              <a class ="link" href="">PHP</a>
+            </li>
+            <li class = "nav-item">
+              <a class ="link" href="">Javascript</a>
+            </li>
+          </ul>
+           <li class="nav-item acctive"style="margin-top:18px ;">
+            <a class="link" href="">Relax code</a>
+          </li>
+          <ul class = "nav-list">
+            
+              <li class = "nav-item active link" >Sign in</li>
+              <li class = "nav-item active link"> Sign up </li>
+             
+            </ul>
+        
+     </div> 
+
+    <!-- sign in -->
+
+  <div class = "box">
+    <div class = "box-align">
+        <label class = "box-label" for="Name" > Name</label>
+        <label class= "notification" for="notification">wrong account</label>
+        <input id="Name" class = "input"  type="text" > 
+        <br>
+       
+        
+         <label class = "box-label"for="Password">Password</label>
+         <label class= "notification" for="notification">wrong Password</label>
+         <input id ="Password" class = "input" type="text">   
+       
+         <br>
+           <div class ="align">
+             <button id ="button__submit">Submit</button>
+             <br/>
+        
+           <button id="next" style="margin-left: 10px;"><a class="next"  href="./Webcontent.html"> next</a></button>
+           </div>
+           <br>   
+           <div class="align">
+            <!-- <h1 class = "next" href="./signUp.html"> sign Up</h1> -->
+
+            <br>
+              <a class ="next" href="./index.html"> home page</a>
+
+             
+           </div>                   
+    </div>
   </div>
-    <h1 class="title">Code thu gian</h1>
+    <!-- SIGN UP-->
+
+    <div class ="boxSU">
+      
+          <div class="alignment">
+            <label class = "describe" for="userName"> User Name</label>
+            <br/>
+            <label class = "notificationSU" for="account already exist" > account already exist</label>
+            <br>
+            <input class="inputSU" type="text">
+            <br>
+            <label class="describe" for="Password"> Password</label>
+            <br>
+            <label class="notificationSU" for="notification"> invalid Pasword</label>
+            <br>
+            <input class = "inputSU" type="text"> 
+            <br>
+            <label class = "describe" for="notification">enter the password</label>
+            <br>
+            <label class= "notificationSU" for="notification">password incorrect</label>
+            <br>
+            <input class="inputSU" type="text">
+            <br>
+            <br>
+            <label class = "displayResult" for="notification">create account success</label>
+            <button class="create" > register</button>
+            <br>
+            
+            <!-- <button class ="nextSU"> <a href="./signIn.html"> sign In</a></button> -->
+            <a class ="next" href="./index.html"> home page</a>
+  
+          </div>
+      
+        
+      
+  </div>
+
+ <script>
+  //API
+       var API = "http://localhost:3000/user"
+
+//-----------------------------------------------
+  var b= document.querySelector('#Name');
+    var Password= document.querySelector('#Password');
+     var submit= document.querySelector('#button__submit');
+    var handleResult = document.querySelector('#next');
+     var notification = document.querySelectorAll('.notification')
+    var link = document.querySelectorAll('.link')
+     var box = document.querySelector('.box')
+    // var next = document.querySelectorAll('.next')
+    var boxSU = document.querySelector('.boxSU')
+
+  
+  
+
+    // sign in link thu 5
+    link[4].onclick = () => {
+      box.style.display="block"
+    }
+
+    //  next[0].onclick = () => {
+    //   box.style.display = "none";
+    //   boxSU.style.display =  "block";
+    //  }
+
+    var name = "";
+         b.onkeyup =(e) =>{
+            name=e.target.value;
+        }
+
+        var password ="";
+        Password.onkeyup = (e) =>{      
+        password = e.target.value
+        }
+        
+          function start () {
+            getInfo(handleInfo);
+          }
+
+
+          function getInfo(callback){
+            fetch(API)
+            .then ((info) => {
+                   return info.json(''); 
+            })
+            .then(callback)
+            .catch(() =>{
+                return 'error'
+            })
+          }
+
+
+
+       
+          function handleInfo(data) {
+            for (var i = 0; i < data.length; i++) {
+              console.log(data[i].name)
+              console.log(data[i].Password)
+                if (name == data[i].name && password == data[i].Password){
+                    
+                    handleResult.style.display = 'block';
+                    return;
+                }
+            }
+
+            //wrong account or wrong Password
+            notification[0].style.display="block";
+            notification[1].style.display="block";
+
+          }
+          
+
+          //Submit
+          submit.onclick = (e) =>{
+            start();
+          }
+
+
+
+          //js sign up 
+           
+   
+          link[5].onclick= ()=>{
+          boxSU.style.display="block"
+        }
+
+          var inputElement = document.querySelectorAll('.inputSU');
+            var displayResult = document.querySelectorAll('.nextSU')
+            var notificationSU = document.querySelectorAll('.notificationSU')
+            var create = document.querySelector('.create')
+         
+   
+            //Dom event
+            var NameSU;
+            inputElement[0].onkeyup= (e)=>{
+                
+                nameSU = e.target.value;
+                console.log(nameSU)
+            }
+
+            var PasswordSU;
+            inputElement[1].onkeyup = (e) =>{
+                
+                PasswordSU = e.target.value;
+             console.log(PasswordSU)    
+            }
+            
+            var again_Password;
+            inputElement[2].onkeyup = (e) => {
+
+                again_Password = e.target.value
+                console.log(again_Password)
+            }
+           
+
+        
+            //port accouont
+            function createAccount(data) {
+             
+                fetch(API,{
+                    method: 'POST',
+                    headers: {
+                        'content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                 .then((a) => {
+                    console.log(a)
+                    // displayResult[0].style.display = 'block';
+                    // displayResult[1].style.display = 'block';
+                 })
+                 .catch(() => {
+                    notification[0].style.display = "block";
+                    
+                    notification[1].style.display = "block";
+                    
+                    notification[2].style.display = "block";
+                 })
+            }
+
+            //dom event
+            var idSU = 4;  
+            create.onclick = () =>{
+              console.log(PasswordSU,again_Password)
+                if (PasswordSU !==again_Password) {
+                notificationSU[1].style.displ="block"
+                notificationSU[2].style.display = "block";
+                  return;
+            }
+
+                idSU++;
+                var Formdata = {
+                    id: idSU,
+                    nameSU,
+                    PasswordSU
+                }
+                // console.log(Formdata)
+                createAccount(Formdata)
+            }
+     </script>
+
+   
  </body>
 </html>
