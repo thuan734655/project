@@ -83,7 +83,10 @@ body {
     margin-left: 30px;
     font-weight:  bold;
 }
-
+.note {
+    color:rgb(207, 75, 27) ;
+    grid-column: 2/3;
+}
 /* music*/
 
 .music {
