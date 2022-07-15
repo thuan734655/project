@@ -90,7 +90,7 @@ var arr = [
     },
     {
         V1 : "think",
-        V2 : "thougt",
+        V2 : "thought",
         V3 : "thought"
     },
     {
