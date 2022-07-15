@@ -255,7 +255,7 @@ var arr = [
     },
     {
         V1 : "wear",
-        V2 : "wrote",
+        V2 : "wore",
         V3 : "worn"
     },
     {
