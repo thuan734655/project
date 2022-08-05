@@ -1506,6 +1506,16 @@ V2Text.onkeyup = (e) => {
 V3Text.onkeyup = (e) => {
     dataV3 = e.target.value;
     console.log(dataV3)
+    if(e.which == 13) {
+        V2Text.value = '';
+        V3Text.value = '';
+        if (V2 == dataV2 && V3 == dataV3) {
+            v0Text.innerText = arr[index+1].V1;
+            index++;
+            resetData();
+        }
+    }
+    console.log(e.which)
 }
 var index = 0;
 
