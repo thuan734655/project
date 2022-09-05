@@ -1506,16 +1506,6 @@ V2Text.onkeyup = (e) => {
 V3Text.onkeyup = (e) => {
     dataV3 = e.target.value;
     console.log(dataV3)
-    if(e.which == 13) {
-        V2Text.value = '';
-        V3Text.value = '';
-        if (V2 == dataV2 && V3 == dataV3) {
-            v0Text.innerText = arr[index+1].V1;
-            index++;
-            resetData();
-        }
-    }
-    console.log(dataV3)
 }
 var index = 0;
 
@@ -1523,6 +1513,7 @@ var index = 0;
 V1 = arr[index].V1;
 V2 = arr[index].V2;
 V3 = arr[index].V3;
+
 
 
 
@@ -1534,13 +1525,35 @@ function resetData() {
     if (V2 == dataV2 && V3 == dataV3) {
         v0Text.innerText = arr[index+1].V1;
         index++;
-
-        //doi dong tu moi 
-        V1 = arr[index].V1;
-        V2 = arr[index].V2;
-        V3 = arr[index].V3;
-    }
+       wrongResultV2.innerText=`V2: ${arr[index].V2}`
+       wrongResultV3.innerText=`V3: ${arr[index].V3}`
+       V1 = arr[index].V1;
+       V2 = arr[index].V2;
+       V3 = arr[index].V3;
+ 
+};
 }
+
+//an hien dap an 
+var resultHide = document.querySelector('.resultHide')
+var resultDisplay = document.querySelector('.resultDisplay')
+var wrongResultV2 = document.querySelector('.wrongResult--V2')
+var wrongResultV3 = document.querySelector('.wrongResult--V3')
+
+resultDisplay.onclick = () => {
+    wrongResultV2.style.display="block"
+    
+    wrongResultV3.style.display="block"
+}
+
+resultHide.onclick = () => {
+    
+    wrongResultV2.style.display="none"
+    
+    wrongResultV3.style.display="none"
+}
+
+
 
     // var timeAdjustmentInput=document.querySelector('.timeAdjustment--input')
     

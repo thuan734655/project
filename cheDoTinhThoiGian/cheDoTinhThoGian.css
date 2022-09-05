@@ -194,3 +194,56 @@ body {
 .confirm:hover{
     background-color: rgb(24, 208, 52);
 }
+.wrongResult{
+    width: 200px;
+    height: 150px;
+    background-color: rgb(11, 10, 10);
+    border-radius: 10px;
+    grid-column: 3/4;
+    grid-row: 3/4;;
+    margin-right: 15px;
+    transform: translateY(-60%);
+}
+.wrongResult--V2{
+    font-weight: bold;
+    color: aliceblue;
+    display: none;
+}
+.wrongResult--V3{
+    font-weight: bold;
+    color: aliceblue;
+    margin-top: 55px;
+    display: none;
+}
+.resultDisplay{
+    width: 120px;
+    height: 30px;
+    background-color: rgb(14, 14, 13);
+    border-radius: 10px;
+    grid-column: 3/4;
+    grid-row: 4/5;;
+    margin-right: 15px;
+    transform: translateY(0%);
+    font-weight: bold;
+    color: rgb(70, 162, 242);
+    cursor: pointer;
+}
+.resultDisplay:hover{
+    color: rgb(23, 154, 11);
+}
+.resultHide{
+    width: 70px;
+    height: 30px;
+    background-color: rgb(7, 7, 6);
+    border-radius: 10px;
+    grid-column: 3/4;
+    grid-row: 4/5;;
+    margin-right: 15px;
+    transform: translateX(150%);
+    font-weight: bold;
+    color: rgb(209, 72, 45);
+    cursor: pointer;
+}
+.resultHide:hover{
+    color: rgb(235, 49, 12);
+}

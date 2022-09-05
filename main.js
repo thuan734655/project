@@ -1503,40 +1503,68 @@ V2Text.onkeyup = (e) => {
     dataV2 = e.target.value;
     console.log(dataV2)
 }
+
+
 V3Text.onkeyup = (e) => {
     dataV3 = e.target.value;
     console.log(dataV3)
-    if(e.which == 13) {
-        V2Text.value = '';
-        V3Text.value = '';
-        if (V2 == dataV2 && V3 == dataV3) {
-            v0Text.innerText = arr[index+1].V1;
-            index++;
-            resetData();
-        }
-    }
+    // if(e.which == 13) {
+    //     V2Text.value = '';
+    //     V3Text.value = '';
+    //     if (V2 == dataV2 && V3 == dataV3) {
+    //         v0Text.innerText = arr[index+1].V1;
+    //         index++;
+    //         resetData();
+    //     }
+    // }
     console.log(e.which)
 }
 var index = 0;
 
 resetData();
-
-check.addEventListener('click',() => {
+var answer =''
+check.onclick = () => {
     V2Text.value = '';
     V3Text.value = '';
     if (V2 == dataV2 && V3 == dataV3) {
         v0Text.innerText = arr[index+1].V1;
         index++;
+       wrongResultV2.innerText=`V2: ${arr[index].V2}`
+       wrongResultV3.innerText=`V3: ${arr[index].V3}`
+        // answer = `<p  class="wrongResult--V2">V2:${ arr[index].V2}</p> <p class="wrongResult--V3">V3: ${arr[index].V3}</p>`
+        // wrongResult.innerHTML=answer
         resetData();
-    }
-});
+     
+};
+}
 function resetData() {
+   
     V1 = arr[index].V1;
     V2 = arr[index].V2;
     V3 = arr[index].V3;
+  
 }
 
 
 
+
+//an hien dap an 
+var resultHide = document.querySelector('.resultHide')
+var resultDisplay = document.querySelector('.resultDisplay')
+var wrongResultV2 = document.querySelector('.wrongResult--V2')
+var wrongResultV3 = document.querySelector('.wrongResult--V3')
+
+resultDisplay.onclick = () => {
+    wrongResultV2.style.display="block"
+    
+    wrongResultV3.style.display="block"
+}
+
+resultHide.onclick = () => {
+    
+    wrongResultV2.style.display="none"
+    
+    wrongResultV3.style.display="none"
+}
 
 
