@@ -113,26 +113,84 @@ body {
 }
 
 
+/*chuyen doi che do*/
 .modeSwitch--text {
-    color:antiquewhite;
-    font-weight: bold;
-    transform: translateY(-40%);
-    cursor: pointer;
-    text-decoration: none;
-   
-  }
-  .modeSwitch--text:hover{
-     color: rgb(15, 116, 205);
-    
-  } 
+  color:antiquewhite;
+  font-weight: bold;
+  transform: translateY(-40%);
+  cursor: pointer;
+  text-decoration: none;
+ 
+}
+.modeSwitch--text:hover{
+   color: rgb(15, 205, 62);
   
-   .modeSwitch{
-    background-color: rgb(6, 6, 6);
-    width: 220px;
-    height: 30px;
+} 
+
+ .modeSwitch{
+  background-color: rgb(6, 6, 6);
+  width: 220px;
+  height: 30px;
+  border-radius: 5px;
+  /* margin-top: 255px; */
+  grid-column: 2/3;
+  grid-row: 4/5;
+  margin-left: 10px;
+} 
+
+
+.timeEffect--title{
+    color: aliceblue;
+    transform: translateY(-230%);
+    margin-left: 45px;
+}
+.timeEffect {
+    margin-top: 70px;
+   /* transform: translateX(290%); */
+    width: 175px;
+    height: 10px;
+    background-color: #beb7b7;
+    border-radius: 10px;
+    grid-column: 3/4;
+    grid-row: 1/2;;
+    margin-right: 15px;
+    /* animation:  load 15s infinite; */
+}
+
+@keyframes load {
+   100%{
+    width:175px;
+   }
+}
+
+.timeAdjustment{
+    grid-column: 3/4;
+    grid-row: 2/3;;
+}
+.timeAdjustment--describe {
+    color: aliceblue;
+
+}
+.timeAdjustment--input {
     border-radius: 5px;
-    /* margin-top: 255px; */
-    grid-column: 2/3;
-    grid-row: 5/6;
-    margin-left: 10px;
-  } 
+}
+
+.confirm--text{
+    color: antiquewhite;
+    transform: translate(25%,-50%);
+    cursor: pointer;
+}
+.confirm{
+    width: 50px;
+    height: 30px;
+    background-color: #beb7b7;
+    border-radius: 10px;
+    grid-column: 3/4;
+    grid-row: 3/4;;
+    margin-right: 15px;
+    
+}
+
+.confirm:hover{
+    background-color: rgb(24, 208, 52);
+}
