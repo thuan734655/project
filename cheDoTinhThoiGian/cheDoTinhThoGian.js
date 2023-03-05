@@ -1517,7 +1517,7 @@ V3 = arr[index].V3;
 
 
 
-setInterval(resetData,10000)
+setInterval(resetData,15000)
 
 function resetData() {
     V2Text.value = '';
