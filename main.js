@@ -1,449 +1,1570 @@
-//dat cuoc
-var datCuoc = document.querySelector('.plateABet')
-var conBau= document.querySelector('.plateAbet__bau')
-var conNai = document.querySelector('.plateAbet__nai')
-var conGa = document.querySelector('.plateAbet__ga')
-var conCa = document.querySelector('.plateAbet__ca')
-var conCua = document.querySelector('.plateAbet__cua')
-var conTep = document.querySelector('.plateAbet__tep')
-var plateABetButton = document.querySelector('.plateABetButton')
+var arr = [
+    {
+        V1 : "go",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "do",
+        V2 : "did",
+        V3 : "done"
+    },
 
-var SoTienCuocConBau = document.querySelector('.plateAbet__bau--totalMoneyBet')
-var SoTienCuocConNai = document.querySelector('.plateAbet__nai--totalMoneyBet')
-var SoTienCuocConGa = document.querySelector('.plateAbet__ga--totalMoneyBet')
-var SoTienCuocConCua = document.querySelector('.plateAbet__cua--totalMoneyBet')
-var SoTienCuocConCa = document.querySelector('.plateAbet__ca--totalMoneyBet')
-var SoTienCuocConTep = document.querySelector('.plateAbet__tep--totalMoneyBet')
+    {
+        V1 : "be",
+        V2 : "was,were",
+        V3 : "been"
+    },
+    {
+        V1 : "see",
+        V2 : "saw",
+        V3 : "seen"
+    },
 
-var close = document.querySelector('.plateABet--close')
+    {
+        V1 : "show",
+        V2 : "showed",
+        V3 : "showed,shown"
+    },
 
-var datCuoc10k = document.querySelector('.plateAbet--Money__10k')
-var datCuoc20k = document.querySelector('.plateAbet--Money__20k')
-var datCuoc50k = document.querySelector('.plateAbet--Money__50k')
+    {
+        V1 : "fly",
+        V2 : "flew",
+        V3 : "flown"
+    },
+
+    {
+        V1 : "sit",
+        V2 : "sat",
+        V3 : "sat"
+    },
+    {
+        V1 : "buy",
+        V2 : "bought",
+        V3 : "bought"
+    },
+    {
+        V1 : "pay",
+        V2 : "paid",
+        V3 : "paid"
+    },
+    {
+        V1 : "write",
+        V2 : "wrote",
+        V3 : "written"
+    },
+    {
+        V1 : "have",
+        V2 : "had",
+        V3 : "had"
+    },
+    {
+        V1 : "say",
+        V2 : "said",
+        V3 : "said"
+    },
+    {
+        V1 : "come",
+        V2 : "came",
+        V3 : "come"
+    },
+    {
+        V1 : "get",
+        V2 : "got",
+        V3 : "got"
+    },
+    {
+        V1 : "fall",
+        V2 : "fell",
+        V3 : "fallen"
+    },
+    {
+        V1 : "make",
+        V2 : "made",
+        V3 : "made"
+    },
+    {
+        V1 : "take",
+        V2 : "took",
+        V3 : "taken"
+    },
+    {
+        V1 : "think",
+        V2 : "thought",
+        V3 : "thought"
+    },
+    {
+        V1 : "know",
+        V2 : "knew",
+        V3 : "known"
+    },
+    {
+        V1 : "tell",
+        V2 : "told",
+        V3 : "told"
+    },
+    {
+        V1 : "find",
+        V2 : "found",
+        V3 : "found"
+    },
+    {
+        V1 : "begin",
+        V2 : "began",
+        V3 : "begun"
+    },
+    {
+        V1 : "feel",
+        V2 : "felt",
+        V3 : "felt"
+    },
+    {
+        V1 : "leave",
+        V2 : "left",
+        V3 : "left"
+    },
+    {
+        V1 : "become",
+        V2 : "became",
+        V3 : "become"
+    },
+    {
+        V1 : "give",
+        V2 : "gave",
+        V3 : "given"
+    },
+    {
+        V1 : "hear",
+        V2 : "heard",
+        V3 : "heard"
+    },
+    {
+        V1 : "stand",
+        V2 : "stood",
+        V3 : "stood"
+    },
+    {
+        V1 : "put",
+        V2 : "put",
+        V3 : "put"
+    },
+    {
+        V1 : "run",
+        V2 : "ran",
+        V3 : "run"
+    },
+    {
+        V1 : "keep",
+        V2 : "kept",
+        V3 : "kept"
+    },
+    {
+        V1 : "bring",
+        V2 : "brought",
+        V3 : "brought"
+    },
+    {
+        V1 : "hold",
+        V2 : "held",
+        V3 : "held"
+    },
+    {
+        V1 : "lose",
+        V2 : "lost",
+        V3 : "lost"
+    },
+    {
+        V1 : "win",
+        V2 : "won",
+        V3 : "won"
+    },
+    {
+        V1 : "speak",
+        V2 : "spoke",
+        V3 : "spoken"
+    },
+    {
+        V1 : "grow",
+        V2 : "grew",
+        V3 : "grown"
+    },
+    {
+        V1 : "meet",
+        V2 : "met",
+        V3 : "met"
+    },
+    {
+        V1 : "spend",
+        V2 : "spent",
+        V3 : "spent"
+    },
+    {
+        V1 : "hit",
+        V2 : "hit",
+        V3 : "hit"
+    },
+    {
+        V1 : "lead",
+        V2 : "led",
+        V3 : "led"
+    },
+    {
+        V1 : "mean",
+        V2 : "meant",
+        V3 : "meant"
+    },
+    {
+        V1 : "learn",
+        V2 : "learnt,learned",
+        V3 : "learnt,learned"
+    },
+    {
+        V1 : "send",
+        V2 : "sent",
+        V3 : "sent"
+    },
+    {
+        V1 : "set",
+        V2 : "set",
+        V3 : "set"
+    },
+    {
+        V1 : "break",
+        V2 : "broke",
+        V3 : "broken"
+    },
+    {
+        V1 : "shake",
+        V2 : "shook",
+        V3 : "shaken"
+    },
+    {
+        V1 : "drive",
+        V2 : "drove",
+        V3 : "driven"
+    },
+    {
+        V1 : "lay",
+        V2 : "laid",
+        V3 : "laid"
+    },
+    {
+        V1 : "catch",
+        V2 : "caught",
+        V3 : "caught"
+    },
+    {
+        V1 : "wear",
+        V2 : "wore",
+        V3 : "worn"
+    },
+    {
+        V1 : "choose",
+        V2 : "chose",
+        V3 : "chosen"
+    },
+    {
+        V1 : "throw",
+        V2 : "threw",
+        V3 : "thrown"
+    },
+    {
+        V1 : "draw",
+        V2 : "drew",
+        V3 : "drawn"
+    },
+    {
+        V1 : "read",
+        V2 : "read",
+        V3 : "read"
+    },
+    {
+        V1 : "shoot",
+        V2 : "shot",
+        V3 : "shot"
+    },
+    {
+        V1 : "sell",
+        V2 : "sold",
+        V3 : "sold"
+    },
+    {
+        V1 : "build",
+        V2 : "built",
+        V3 : "built"
+    },
+    {
+        V1 : "understand",
+        V2 : "understood",
+        V3 : "understood"
+    },
+    {
+        V1 : "lean",
+        V2 : "leant,leaned",
+        V3 : "leant,leaned"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+    {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
+  {
+        V1 : "be",
+        V2 : "went",
+        V3 : "gone"
+    },
 
 
-var chot = document.querySelector('.plateAbet--accept')
-var boTienCuoc = document.querySelector('.plateAbet--cancelBet')
+]
+var V1,V2,V3;
+var V0 = document.querySelector('.V1')
+var v0Text = document.querySelector('.V1-text')
+var V2Text = document.querySelector('.IV2')
+var V3Text = document.querySelector('.IV3')
+var check = document.querySelector('button')
 
-var conDangChon = 0;
-
-var totalMoneyNai = 0;
-var totalMoneyBau = 0;
-var totalMoneyGa = 0;
-var totalMoneyCa = 0;
-var totalMoneyCua = 0;
-var totalMoneyTep = 0;
+var dataV2,dataV3;
+V2Text.onkeyup = (e) => {
+    dataV2 = e.target.value;
+    console.log(dataV2)
+}
 
 
-conNai.onclick = () => {
-   conDangChon = 1;
-   conNai.style.boxShadow = "0 0 10px red"
-   conCa.style.boxShadow = "0 0 0 red"
-   conBau.style.boxShadow = "0 0 0 red"
-   conGa.style.boxShadow = "0 0 0 red"
-   conCua.style.boxShadow = "0 0 0 red"
-   conTep.style.boxShadow = "0 0 0 red"
+V3Text.onkeyup = (e) => {
+    dataV3 = e.target.value;
+    console.log(dataV3)
+    // if(e.which == 13) {
+    //     V2Text.value = '';
+    //     V3Text.value = '';
+    //     if (V2 == dataV2 && V3 == dataV3) {
+    //         v0Text.innerText = arr[index+1].V1;
+    //         index++;
+    //         resetData();
+    //     }
+    // }
+    console.log(e.which)
+}
+var index = 0;
+
+resetData();
+var answer =''
+check.onclick = () => {
+    V2Text.value = '';
+    V3Text.value = '';
+    if (V2 == dataV2 && V3 == dataV3) {
+        v0Text.innerText = arr[index+1].V1;
+        index++;
+       wrongResultV2.innerText=`V2: ${arr[index].V2}`
+       wrongResultV3.innerText=`V3: ${arr[index].V3}`
+        // answer = `<p  class="wrongResult--V2">V2:${ arr[index].V2}</p> <p class="wrongResult--V3">V3: ${arr[index].V3}</p>`
+        // wrongResult.innerHTML=answer
+        resetData();
+     
+};
+}
+function resetData() {
    
-
-}
-
-conBau.onclick = ()=> {
-    conDangChon=2;
-    conBau.style.boxShadow = "0 0 10px red"
-    conCa.style.boxShadow = "0 0 0 red"
-    conNai.style.boxShadow = "0 0 0 red"
-    conGa.style.boxShadow = "0 0 0 red"
-    conCua.style.boxShadow = "0 0 0 red"
-    conTep.style.boxShadow = "0 0 0 red"
-}
-
-conGa.onclick = ()=> {
-    conDangChon=3;
-    conGa.style.boxShadow = "0 0 10px red"
-    conBau.style.boxShadow = "0 0 0 red"
-    conNai.style.boxShadow = "0 0 0 red"
-    conCa.style.boxShadow = "0 0 0 red"
-    conCua.style.boxShadow = "0 0 0 red"
-    conTep.style.boxShadow = "0 0 0 red"
-}
-conCa.onclick = ()=> {
-    conDangChon=4;
-    conCa.style.boxShadow = "0 0 10px red"
-    conBau.style.boxShadow = "0 0 0 red"
-    conGa.style.boxShadow = "0 0 0 red"
-    conNai.style.boxShadow = "0 0 0 red"
-    conCua.style.boxShadow = "0 0 0 red"
-    conTep.style.boxShadow = "0 0 0 red"
-}
-conCua.onclick = ()=> {
-    conDangChon=5;
-    conCua.style.boxShadow = "0 0 10px red"
-    conBau.style.boxShadow = "0 0 0 red"
-    conGa.style.boxShadow = "0 0 0 red"
-    conCa.style.boxShadow = "0 0 0 red"
-    conNai.style.boxShadow = "0 0 0 red"
-    conTep.style.boxShadow = "0 0 0 red"
-}
-conTep.onclick = ()=> {
-    conDangChon=6;
-    conTep.style.boxShadow = "0 0 10px red"
-    conBau.style.boxShadow = "0 0 0 red"
-    conGa.style.boxShadow = "0 0 0 red"
-    conCa.style.boxShadow = "0 0 0 red"
-    conNai.style.boxShadow = "0 0 0 red"
-    conCua.style.boxShadow = "0 0 0 red"
-}
-close.onclick = () => {
-    datCuoc.style.visibility = 'hidden'
-}
-
-plateABetButton.onclick = () => {
-    datCuoc.style.visibility = 'visible'
-    caiNap.style.display = 'block'
-soTienThang = 0
-soTienThua = 0
-}
-
-function kiemTraVaGanSoTienCuocChoTungCon(indexChild,amountOfMoney) {
-
-  if (indexChild == 1 ) {
-    
-   
-    
-    totalMoneyNai = Number(amountOfMoney)
-    console.log(totalMoneyNai)
-    if (amountOfMoney == 10000) {
-      amountOfMoney = '10.000Đ'
-  }
-  else if (amountOfMoney == 20000) {
-    amountOfMoney = '20.000Đ'
-  }
-  else {
-    amountOfMoney = '50.000Đ'
-  }
-  SoTienCuocConNai.innerText = amountOfMoney
-  SoTienCuocConNai.style.marginLeft='-20px'
-  }
-
-
-  else if (indexChild == 2 ) {
-    
-    totalMoneyBau = Number(amountOfMoney)
-
-    if (amountOfMoney == 10000) {
-      amountOfMoney = '10.000Đ'
-  }
-  else if (amountOfMoney == 20000) {
-    amountOfMoney = '20.000Đ'
-  }
-  else {
-    amountOfMoney = '50.000Đ'
-  }
-  SoTienCuocConBau.innerText = amountOfMoney
-  SoTienCuocConBau.style.marginLeft='-20px'
-    
-  }
-  else if (indexChild == 3 ) {
-    totalMoneyGa = Number(amountOfMoney)
-    
-    if (amountOfMoney == 10000) {
-      amountOfMoney = '10.000Đ'
-  }
-  else if (amountOfMoney == 20000) {
-    amountOfMoney = '20.000Đ'
-  }
-  else {
-    amountOfMoney = '50.000Đ'
-  }
-  SoTienCuocConGa.innerText = amountOfMoney
-  SoTienCuocConGa.style.marginLeft='-20px'
-  }
-  else if (indexChild == 4 ) {
-    totalMoneyCa = Number(amountOfMoney)
-    
-    if (amountOfMoney == 10000) {
-      amountOfMoney = '10.000Đ'
-  }
-  else if (amountOfMoney == 20000) {
-    amountOfMoney = '20.000Đ'
-  }
-  else {
-    amountOfMoney = '50.000Đ'
-  }
-  SoTienCuocConCa.innerText = amountOfMoney
-  SoTienCuocConCa.style.marginLeft='-20px'
-  }
-  else  if (indexChild == 5 ) {
-    totalMoneyCua = Number(amountOfMoney)
-    
-    if (amountOfMoney == 10000) {
-      amountOfMoney = '10.000Đ'
-  }
-  else if (amountOfMoney == 20000) {
-    amountOfMoney = '20.000Đ'
-  }
-  else {
-    amountOfMoney = '50.000Đ'
-  }
-  SoTienCuocConCua.innerText = amountOfMoney
-  SoTienCuocConCua.style.marginLeft='-20px'
-  }
-  else  {
-    totalMoneyTep = Number(amountOfMoney)
-    
-    if (amountOfMoney == 10000) {
-      amountOfMoney = '10.000Đ'
-  }
-  else if (amountOfMoney == 20000) {
-    amountOfMoney = '20.000Đ'
-  }
-  else {
-    amountOfMoney = '50.000Đ'
-  }
-  SoTienCuocConTep.innerText = amountOfMoney
-  SoTienCuocConTep.style.marginLeft='-20px'
-  }
-
-}
-
-datCuoc10k.onclick= () =>{
-    kiemTraVaGanSoTienCuocChoTungCon(conDangChon,'10000')
-}
-datCuoc20k.onclick= () =>{
-    kiemTraVaGanSoTienCuocChoTungCon(conDangChon,'20000')
-}
-datCuoc50k.onclick= () =>{
-    kiemTraVaGanSoTienCuocChoTungCon(conDangChon,'50000')
-}
-
-chot.onclick = () => {
-    datCuoc.style.visibility = 'hidden'
-}
-
-function kiemTraVaBoTienCuoc (indexChild) {
-  if (indexChild == 1 ) {
-    SoTienCuocConNai.innerText = '0Đ'
-    SoTienCuocConNai.style.marginLeft='0px'
-  }
-  else  if (indexChild == 2 ) {
-    SoTienCuocConBau.innerText =  '0Đ'
-    SoTienCuocConBau.style.marginLeft='0px'
-  }
-  else  if (indexChild == 3 ) {
-    SoTienCuocConGa.innerText =  '0Đ'
-    SoTienCuocConGa.style.marginLeft='0px'
-  }
-  else  if (indexChild == 4 ) {
-    SoTienCuocConCa.innerText =  '0Đ'
-    SoTienCuocConCa.style.marginLeft='0px'
-  }
-  else if (indexChild == 5 ) {
-    SoTienCuocConCua.innerText =  '0Đ'
-    SoTienCuocConCua.style.marginLeft='0px'
-  }
-  else {
-    SoTienCuocConTep.innerText =  '0Đ'
-    SoTienCuocConTep.style.marginLeft='0px'
-  }
-}
-
-boTienCuoc.onclick = () => {
-  kiemTraVaBoTienCuoc(conDangChon);
-}
-
-
-
-//xoc
- 
-var xoc = document.querySelector('.discShock')
-var con1 = document.querySelector('.plate-child1__img')
-var con2 = document.querySelector('.plate-child2__img')
-var con3 = document.querySelector('.plate-child3__img')
-
-function kiemTraVaGanKetQuaRandom(randomConThu1,randomConThu2,randomConThu3) {
-  if (randomConThu1 == 1 ){
-    con1.src='./img/conNai.png'
-  }
-  else if (randomConThu1 == 2){
-    con1.src='./img/conBau.png'
-  }
-  else if (randomConThu1 == 3){
-    con1.src="./img/conGA.png"
-  }
-  else if (randomConThu1 == 4){
-    con1.src="./img/conCa.png" 
-  }
-  else if (randomConThu1 == 5){
-    con1.src="./img/conCUa.png"
-  }
-  else {
-    con1.src="./img/conTep.png"
-  }
-
-  if (randomConThu2 == 1 ){
-    con2.src='./img/conNai.png'
-  }
-  else if (randomConThu2 == 2){
-    con2.src='./img/conBau.png'
-  }
-  else if (randomConThu2 == 3){
-    con2.src="./img/conGA.png"
-  }
-  else if (randomConThu2 == 4){
-    con2.src="./img/conCa.png" 
-  }
-  else if (randomConThu2 == 5){
-    con2.src="./img/conCUa.png"
-  }
-  else {
-    con2.src="./img/conTep.png"
-  }
-
-  if (randomConThu3 == 1 ){
-    con3.src='./img/conNai.png'
-  }
-  else if (randomConThu3 == 2){
-    con3.src='./img/conBau.png'
-  }
-  else if (randomConThu3 == 3){
-    con3.src="./img/conGA.png"
-  }
-  else if (randomConThu3 == 4){
-    con3.src="./img/conCa.png" 
-  }
-  else if (randomConThu3 == 5){
-    con3.src="./img/conCUa.png"
-  }
-  else {
-    con3.src="./img/conTep.png"
-  }
+    V1 = arr[index].V1;
+    V2 = arr[index].V2;
+    V3 = arr[index].V3;
   
 }
 
-var randomConThu1 = Math.floor(Math.random() *6)+1
-var randomConThu2 = Math.floor(Math.random() *6)+1
-var randomConThu3 = Math.floor(Math.random() *6)+1
-var arrayResultRanDom = [0,0,0]
-xoc.onclick = () => {
- randomConThu1 = Math.floor(Math.random() *6)+1
- randomConThu2 = Math.floor(Math.random() *6)+1
- randomConThu3 = Math.floor(Math.random() *6)+1
- arrayResultRanDom = [randomConThu1,randomConThu2,randomConThu3]
-  kiemTraVaGanKetQuaRandom(randomConThu1,randomConThu2,randomConThu3);
-  soTienThang = 0
-  soTienThua = 0
+
+
+
+//an hien dap an 
+var resultHide = document.querySelector('.resultHide')
+var resultDisplay = document.querySelector('.resultDisplay')
+var wrongResultV2 = document.querySelector('.wrongResult--V2')
+var wrongResultV3 = document.querySelector('.wrongResult--V3')
+
+resultDisplay.onclick = () => {
+    wrongResultV2.style.display="block"
+    
+    wrongResultV3.style.display="block"
 }
 
-
-// mo
-
-var mo = document.querySelector('.openLid')
-
-
-
-var caiNap = document.querySelector('.lidImg')
-
-caiNap.onclick = () => {
-  caiNap.style.display='none'
-}
-
-var soTienAn = document.querySelector('.SoTienAn')
-var soTienThuaElement = document.querySelector('.SoTienThua')
-var soTienDangCoElement = document.querySelector('.SoTienHienCo')
-
-// tien ben profile
-var totalMoney = document.querySelector('.totalMoney')
-
-var soTienThang = 0;
-var soTienThua = 0;
-var soTienHienCo = 1000000000;
-
-function checkResultTrue (indexChild) {
-     if(indexChild == 1) {
-    soTienThang += totalMoneyNai
-    console.log(totalMoneyNai)
-     }
-     else  if (indexChild == 2){
-     soTienThang += totalMoneyBau
-     }
-     else if (indexChild==3) {
-     soTienThang += totalMoneyGa
-     }
-     else if (indexChild==4) {
-     soTienThang +=totalMoneyCa
-     }
-     else if (indexChild == 5) {
-     soTienThang+=totalMoneyCua
-     }
-     else {
-     soTienThang+= totalMoneyTep
-     }
-
-     console.log(soTienThang)
-} 
-
-
-function checkResultFalse (arrayResultRanDom) {
-  
-   for ( var indexSoSanh =1; indexSoSanh<=6;indexSoSanh++) {
-    let check = true
-    for(var KetQua =0 ; KetQua <=2; KetQua++) {
-      if(indexSoSanh == arrayResultRanDom[KetQua]){
-        check = false
-        KetQua = 3;
-      }
-
-    }
-    if(check == true){
-      if(indexSoSanh == 1) {
-        soTienThua += totalMoneyNai
-        console.log(totalMoneyNai)
-       }
-       else  if (indexSoSanh == 2){
-        soTienThua += totalMoneyBau
-        console.log(totalMoneyBau)
-       }
-       else if (indexSoSanh==3) {
-        soTienThua += totalMoneyGa
-        console.log(totalMoneyGa)
-       }
-       else if (indexSoSanh==4) {
-        soTienThua +=totalMoneyCa
-        console.log(totalMoneyCa)
-  
-       }
-       else if (indexSoSanh == 5) {
-        
-        soTienThua+=totalMoneyCua
-        console.log(totalMoneyCua) 
-      }
-       else {
-        soTienThua+= totalMoneyTep
-        console.log(totalMoneyTep)
-       }
-    }
-   
-   }
-} 
-
-
-
-mo.onclick = () => {
- caiNap.style.display = 'none'
- for (var index = 0; index<=2;index++) {
-checkResultTrue(arrayResultRanDom[index])
-  
- }
-
- checkResultFalse(arrayResultRanDom)
- console.log(soTienThua)
- soTienHienCo +=(soTienThang- soTienThua)
- 
- soTienAn.innerText = `Số tiền thắng: ${soTienThang}Đ`
- soTienThuaElement.innerText = `Số tiền thua: ${soTienThua}Đ`
- soTienDangCoElement.innerText = ` Số tiền đang có: ${soTienHienCo}Đ`
-//  tien ben profile
-totalMoney.innerText = `Số tiền:${soTienHienCo}Đ`
+resultHide.onclick = () => {
+    
+    wrongResultV2.style.display="none"
+    
+    wrongResultV3.style.display="none"
 }
 
 
